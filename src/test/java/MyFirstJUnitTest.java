@@ -9,4 +9,12 @@ public class MyFirstJUnitTest {
         int result = mathUtils.add(4,8);
         Assertions.assertEquals(expect,result,"Should Add two numbers");
     }
+
+    @Test
+    public void testDiscArea() {
+        MathUtils mathUtils = new MathUtils();
+        Double expect = 50.26548245743669;
+        Double result = mathUtils.calculateAreaDisc(4.0);
+        Assertions.assertEquals(expect,result,"Should calculate area of disk");
+    }
 }
