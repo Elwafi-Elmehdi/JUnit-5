@@ -5,7 +5,7 @@ public class MyFirstJUnitTest {
     @Test
     public void test() {
         MathUtils mathUtils = new MathUtils();
-        int expect = 7;
+        int expect = 12;
         int result = mathUtils.add(4,8);
         Assertions.assertEquals(expect,result,"Should Add two numbers");
     }
