@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 public class MyFirstJUnitTest {
@@ -7,7 +7,7 @@ public class MyFirstJUnitTest {
         MathUtils mathUtils = new MathUtils();
         int expect = 12;
         int result = mathUtils.add(4,8);
-        Assertions.assertEquals(expect,result,"Should Add two numbers");
+        assertEquals(expect,result,"Should Add two numbers");
     }
 
     @Test
@@ -15,6 +15,6 @@ public class MyFirstJUnitTest {
         MathUtils mathUtils = new MathUtils();
         Double expect = 50.26548245743669;
         Double result = mathUtils.calculateAreaDisc(4.0);
-        Assertions.assertEquals(expect,result,"Should calculate area of disk");
+        assertEquals(expect,result,"Should calculate area of disk");
     }
 }
