@@ -5,4 +5,8 @@ public class MathUtils {
     public Double calculateAreaDisc(Double x){
         return Math.PI * x * x;
     }
+
+    public Double devide(Double x,int y ) {
+        return x / y;
+    }
 }

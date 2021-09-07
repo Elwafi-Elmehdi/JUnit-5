@@ -17,4 +17,7 @@ public class MyFirstJUnitTest {
         Double result = mathUtils.calculateAreaDisc(4.0);
         assertEquals(expect,result,"Should calculate area of disk");
     }
+
+    @Test
+    public void testDevide()
 }
