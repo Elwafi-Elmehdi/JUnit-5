@@ -21,8 +21,6 @@ public class MyFirstJUnitTest {
     @Test
     public void testDivide() {
         MathUtils mathUtils = new MathUtils();
-        Double nom = 4.5;
-        int deno = 0;
-        assertThrows(ArithmeticException.class,() -> mathUtils.divide(nom,deno));
+        assertThrows(ArithmeticException.class,() -> mathUtils.divide(1,0),"Should throw arithmetic exception");
     }
 }

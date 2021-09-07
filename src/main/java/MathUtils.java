@@ -6,7 +6,7 @@ public class MathUtils {
         return Math.PI * x * x;
     }
 
-    public Double divide(Double x,int y ) {
+    public int divide(int x,int y ) {
         return x / y;
     }
 }
