@@ -1,10 +1,19 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MyFirstJUnitTest {
+
+    MathUtils mathUtils;
+
+    @BeforeEach
+    void init() {
+        mathUtils = new MathUtils();
+    }
+
     @Test
     public void test() {
-        MathUtils mathUtils = new MathUtils();
         int expect = 12;
         int result = mathUtils.add(4,8);
         assertEquals(expect,result,"Should Add two numbers");
@@ -12,7 +21,6 @@ public class MyFirstJUnitTest {
 
     @Test
     public void testDiscArea() {
-        MathUtils mathUtils = new MathUtils();
         Double expect = 50.26548245743669;
         Double result = mathUtils.calculateAreaDisc(4.0);
         assertEquals(expect,result,"Should calculate area of disk");
@@ -20,7 +28,6 @@ public class MyFirstJUnitTest {
 
     @Test
     public void testDivide() {
-        MathUtils mathUtils = new MathUtils();
         assertThrows(ArithmeticException.class,() -> mathUtils.divide(1,0),"Should throw arithmetic exception");
     }
 }
