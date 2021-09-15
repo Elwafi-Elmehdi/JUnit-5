@@ -1,12 +1,22 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MyFirstJUnitTest {
 
     MathUtils mathUtils;
+    @BeforeAll
+    void beforeAllInit() {
+        System.out.println("THis needs to run before all");
+    }
 
+    @AfterEach
+    void afterEach() {
+        System.out.println("Passed");
+    }
     @BeforeEach
     void init() {
         mathUtils = new MathUtils();
