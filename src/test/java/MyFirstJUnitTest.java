@@ -9,8 +9,8 @@ public class MyFirstJUnitTest {
 
     MathUtils mathUtils;
     @BeforeAll
-    void beforeAllInit() {
-        System.out.println("THis needs to run before all");
+    static void beforeAllInit() { // we need to run ths method before the obj is init so we need to make it static
+        System.out.println("This needs to run before all");
     }
 
     @AfterEach
