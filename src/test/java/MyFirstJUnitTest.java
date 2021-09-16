@@ -6,7 +6,6 @@ public class MyFirstJUnitTest {
 
     MathUtils mathUtils;
 
-    @Disabled
     @BeforeAll
     static void beforeAllInit() { // we need to run ths method before the obj is init so we need to make it static
         System.out.println("This needs to run before all");
@@ -28,7 +27,7 @@ public class MyFirstJUnitTest {
         int result = mathUtils.add(4,8);
         assertEquals(expect,result,"Should Add two numbers");
     }
-
+    @Disabled
     @Test
     public void testDiscArea() {
         Double expect = 50.26548245743669;
