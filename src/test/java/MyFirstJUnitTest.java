@@ -1,13 +1,12 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class MyFirstJUnitTest {
 
     MathUtils mathUtils;
+
+    @Disabled
     @BeforeAll
     static void beforeAllInit() { // we need to run ths method before the obj is init so we need to make it static
         System.out.println("This needs to run before all");
@@ -17,6 +16,7 @@ public class MyFirstJUnitTest {
     void afterEach() {
         System.out.println("Passed");
     }
+
     @BeforeEach
     void init() {
         mathUtils = new MathUtils();
