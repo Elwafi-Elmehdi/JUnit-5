@@ -41,4 +41,11 @@ public class MyFirstJUnitTest {
     public void testDivide() {
         assertThrows(ArithmeticException.class,() -> mathUtils.divide(1,0),"Should throw arithmetic exception");
     }
+
+    @Test
+    @Disabled
+    @DisplayName("TDD Should not run")
+    void failTest() {
+        fail("Failed");
+    }
 }
