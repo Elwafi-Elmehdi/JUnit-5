@@ -27,6 +27,7 @@ public class MyFirstJUnitTest {
     @DisplayName("Should add two numbers")
     public void test() {
         int expect = 12;
+        Assumptions.assumeTrue(expect == 12);
         int result = mathUtils.add(4,8);
         assertEquals(expect,result,"Should Add two numbers");
     }
