@@ -1,6 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 
 public class MyFirstJUnitTest {
 
@@ -38,6 +40,7 @@ public class MyFirstJUnitTest {
 
     @Test
     @DisplayName("Should throw arithmetic exception")
+    @EnabledOnOs(OS.LINUX)
     public void testDivide() {
         assertThrows(ArithmeticException.class,() -> mathUtils.divide(1,0),"Should throw arithmetic exception");
     }
