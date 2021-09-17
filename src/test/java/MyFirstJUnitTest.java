@@ -22,20 +22,22 @@ public class MyFirstJUnitTest {
     }
 
     @Test
+    @DisplayName("Should add two numbers")
     public void test() {
         int expect = 12;
         int result = mathUtils.add(4,8);
         assertEquals(expect,result,"Should Add two numbers");
     }
-    @Disabled
     @Test
+    @DisplayName("Should calculate area of disk")
     public void testDiscArea() {
         Double expect = 50.26548245743669;
         Double result = mathUtils.calculateAreaDisc(4.0);
-        assertEquals(expect,result,"Should calculate area of disk");
+        assertEquals(expect,result);
     }
 
     @Test
+    @DisplayName("Should throw arithmetic exception")
     public void testDivide() {
         assertThrows(ArithmeticException.class,() -> mathUtils.divide(1,0),"Should throw arithmetic exception");
     }
