@@ -71,7 +71,9 @@ public class MyFirstJUnitTest {
     @DisplayName("Test multiply method")
     void testMultiply() {
         assertAll(
-//                () -> assertEquals(mathUtils.)
+                () -> assertEquals(4,mathUtils.multiply(2,2)),
+                () -> assertEquals(0,mathUtils.multiply(4,0)),
+                () -> assertEquals(-4,mathUtils.multiply(4,-1))
         );
     }
 
