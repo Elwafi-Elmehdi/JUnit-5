@@ -48,6 +48,8 @@ public class MyFirstJUnitTest {
     @DisplayName("Should throw arithmetic exception")
     @EnabledOnOs(OS.LINUX)
     public void testDivide() {
+//        boolean isServerUp = false;
+//        assumeTrue(isServerUp);
         assertThrows(ArithmeticException.class,() -> mathUtils.divide(1,0),"Should throw arithmetic exception");
     }
 
