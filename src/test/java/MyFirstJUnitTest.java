@@ -66,4 +66,13 @@ public class MyFirstJUnitTest {
     void testJRE() {
         assertEquals(1,1);
     }
+
+    @Test
+    @DisplayName("Test multiply method")
+    void testMultiply() {
+        assertAll(
+//                () -> assertEquals(mathUtils.)
+        );
+    }
+
 }
