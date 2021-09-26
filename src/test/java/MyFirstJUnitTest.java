@@ -1,7 +1,9 @@
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.JRE;
 import org.junit.jupiter.api.condition.OS;
 
 public class MyFirstJUnitTest {
@@ -51,5 +53,12 @@ public class MyFirstJUnitTest {
     @DisplayName("TDD Should not run")
     void failTest() {
         fail("Failed");
+    }
+
+    @Test
+    @DisplayName("Should only run on JRE version 11")
+    @EnabledOnJre(JRE.JAVA_11)
+    void testJRE() {
+        assertEquals(1,1);
     }
 }
