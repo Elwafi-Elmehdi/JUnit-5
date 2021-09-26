@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.*;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.EnabledOnJre;
@@ -37,6 +38,8 @@ public class MyFirstJUnitTest {
     @DisplayName("Should calculate area of disk")
     public void testDiscArea() {
         Double expect = 50.26548245743669;
+        // Assuming that expected is a double
+        assumeTrue(expect instanceof Double);
         Double result = mathUtils.calculateAreaDisc(4.0);
         assertEquals(expect,result);
     }
